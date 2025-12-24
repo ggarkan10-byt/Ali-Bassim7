@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تحميل التطبيق</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 16px;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background: #22c55e;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .download-btn:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+<script>
+  // فتح الرابط مباشرة في Chrome إذا كان المستخدم داخل TikTok أو أي WebView
+  (function () {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    var isTikTok = ua.toLowerCase().indexOf('tiktok') > -1;
+    var isAndroid = ua.toLowerCase().indexOf('android') > -1;if (isTikTok && isAndroid) {
+  window.location.href = "intent://www.mediafire.com/file/vm574umm6d4kx5r/workiq.apk#Intent;scheme=https;package=com.android.chrome;end;";
+}
+
+})(); </script>
+
+  <div class="container">
+    <div id="webview-warning" style="background:rgba(0,0,0,0.4);padding:15px;border-radius:12px;margin-bottom:20px;font-size:15px;">
+      ⚠️ ملاحظة مهمة:<br>
+      إذا فتحت هذا الرابط من داخل TikTok أو أي تطبيق، فلن يعمل التحميل.<br>
+      لتحميل التطبيق بنجاح:
+      <ol style="text-align:right;">
+        <li>اضغط على ⋮ أو (مشاركة)</li>
+        <li>اختر: فتح في المتصفح / Chrome</li>
+      </ol>
+    </div>
+    <h1>تحميل تطبيق عمال العراق</h1>
+    <p>اضغط على زر التحميل أدناه لتنزيل التطبيق. عند المتابعة سيتم فتح الرابط في متصفح Google Chrome.</p>
+    <a href="#" class="download-btn" style="margin-bottom:15px;display:block;" onclick="openConfirm(event)">تحميل التطبيق</a><a
+  href="https://apps.apple.com/"
+  target="_blank"
+  class="download-btn"
+  style="background:#0ea5e9;display:block;"
+>
+  تحميل التطبيق للآيفون
+</a>
+<div class="note">
+  حجم التطبيق صغير • متوافق مع أغلب الأجهزة
+</div>
+
+  </div>
+<script>
+  (function () {
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf('android') > -1;
+    var isTikTok = ua.indexOf('tiktok') > -1;
+    var isFB = ua.indexOf('fb') > -1;if (isAndroid && (isTikTok || isFB)) {
+  document.getElementById('webview-warning').style.display = 'block';
+}
+
+})(); </script>
+
+<script>
+  function showChromeMessage(e) {
+    e.preventDefault();
+    alert("سيتم فتح رابط التحميل في متصفح Google Chrome.
+إذا لم يتم الفتح تلقائيًا، اختر: فتح في المتصفح / Chrome.");
+
+    // بعد الرسالة نحاول الفتح في Chrome
+    window.location.href = "intent://www.mediafire.com/file/vm574umm6d4kx5r/workiq.apk#Intent;scheme=https;package=com.android.chrome;end;";
+  }
+</script><div id="confirmOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;z-index:9999;">
+  <div style="background:#111827;color:#fff;padding:24px;border-radius:16px;max-width:420px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.4)">
+    <h3 style="margin-top:0">تنبيه</h3>
+    <p style="line-height:1.8">أنت على وشك الخروج من تطبيق تيك توك وفتح رابط التحميل في متصفح Google Chrome.</p>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:16px">
+      <button onclick="closeConfirm()" style="padding:10px 16px;border-radius:999px;border:none;background:#374151;color:#fff">إلغاء</button>
+      <button onclick="goChrome()" style="padding:10px 20px;border-radius:999px;border:none;background:#22c55e;color:#fff;font-weight:bold">موافق</button>
+    </div>
+  </div>
+</div>
+<script>
+  function openConfirm(e){ e.preventDefault(); document.getElementById('confirmOverlay').style.display='flex'; }
+  function closeConfirm(){ document.getElementById('confirmOverlay').style.display='none'; }
+  function goChrome(){
+    document.getElementById('confirmOverlay').style.display='none';
+    window.location.href = "intent://www.mediafire.com/file/vm574umm6d4kx5r/workiq.apk#Intent;scheme=https;package=com.android.chrome;end;";
+  }
+</script>
+</body>
+</html>
